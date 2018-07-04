@@ -71,11 +71,38 @@ const double PI  = acos(-1.0);
 // BEGIN CUT HERE
 int main() {
   int n;
-  while (cin >> n)
+  while (true)
   {
+    cin >> n;
     if (n == 0) break;
+    while (true)
+    {
+      VI v;
+      v.reserve(n);
+      int t;
+      cin >> t;
+      if (t == 0) { cout << endl; break;}
+      v.push_back(t);
+      FOR(i, 1, n)
+      {
+        int t;
+        cin >> t;
+        v.push_back(t);
+      }
+      int cur = 0;
+      stack<int> s;
 
-    REP
-  
+      FOR(i, 1, n+1)
+      {
+        s.push(i);
+        while(!s.empty() && cur < n && s.top() == v[cur])
+        {
+          cur ++;
+          s.pop();
+        }
+      }
+      if (cur < n) cout << "No" << endl;
+      else cout << "Yes" << endl;
+    }
   }
 }
