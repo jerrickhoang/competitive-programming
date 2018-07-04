@@ -1,3 +1,4 @@
+
 #include <vector>
 #include <list>
 #include <map>
@@ -70,4 +71,32 @@ const double PI  = acos(-1.0);
 
 // BEGIN CUT HERE
 int main() {
+  int n;
+  n = -1;
+  while (n != 0)
+  {
+    cin >> n;
+    if (n == 0) break;
+
+    VI v;
+    priority_queue<int, VI, greater<int> > q;
+    REP(i, n)
+    {
+      int t;
+      cin >> t;
+      q.push(t);
+    }
+    int cost = 0;
+    while (!q.empty())
+    {
+      int e1 = q.top();
+      q.pop();
+      if (q.empty()) break;
+      int e2 = q.top();
+      q.pop();
+      cost += e1 + e2;
+      q.push(e1 + e2);
+    }
+    cout << cost << endl;
+  }
 }

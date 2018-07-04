@@ -1,3 +1,4 @@
+
 #include <vector>
 #include <list>
 #include <map>
@@ -19,7 +20,6 @@
 #include <string>
 #include <cstring>
 #include <ctime>
-#include <queue>
 
 using namespace std;
 
@@ -70,4 +70,12 @@ const double PI  = acos(-1.0);
 
 // BEGIN CUT HERE
 int main() {
+  int n;
+  while (cin >> n)
+  {
+    if (n == 0) break;
+
+    REP
+  
+  }
 }
