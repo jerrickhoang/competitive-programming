@@ -9,3 +9,5 @@ uper_bound(v.begin(), v.end(), m) find the last index of m (not inclusive), and 
 accumulate(v.begin(), v.end(), static_cast<string>("")) to concatenate all strings. sort(v.begin(), v.end(), cmp) cmp returns boolean to sort using custom comparison function UVA 10905
 
 Use std::priority_queue in <queue> to get max. Use q.push(a) to push element in the queue, q.top() to peek at the element, void q.pop() to remove an element from the queue. Use priority_queue<int, VI, greater<int> > q for increasing queue. UVA 10954
+
+Use std::stack<int> s , s.push(), s.top(), s.pop() similar to priority_queue described above. UVA 514
