@@ -75,28 +75,28 @@ int main() {
   cin >> t;
   REP(j, t)
   {
-    cout << endl;
     int n;
     cin >> n;
-    dump(n);
     int res = 0;
-    int u = 0;
+    int b = 0;
+    int l = 0;
     map<int, int> m;
     REP(i, n)
     {
       int k;
       cin >> k;
-      int ind = m[k];
-      if (ind != 0)
+      auto it = m.find(k);
+      if (it != m.end())
       {
-        res = max(res, i-ind-1);
-        res = max(res, u);
-        u = 0;
+        int ind = it->second;
+        l = max(l, ind);
+        res = max(res, b);
+        b = i - l - 1;
       }
-      u ++;
+      b ++;
       m[k] = i;
     }
-    res = max(res, u);
+    res = max(res, b);
     cout << res << endl;
   }
 }
