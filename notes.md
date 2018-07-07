@@ -11,3 +11,5 @@ accumulate(v.begin(), v.end(), static_cast<string>("")) to concatenate all strin
 Use std::priority_queue in <queue> to get max. Use q.push(a) to push element in the queue, q.top() to peek at the element, void q.pop() to remove an element from the queue. Use priority_queue<int, VI, greater<int> > q for increasing queue. UVA 10954
 
 Use std::stack<int> s , s.push(), s.top(), s.pop() similar to priority_queue described above. UVA 514
+
+Use map<int, int> m, m.find()!=m.end() or EXIST(m, k) to check if an element is in the map. UVA 11572. Note that map<int, int> is comparable be default, so you can have map <map<int, int> > or set< map<int, int> > UVA 11286
