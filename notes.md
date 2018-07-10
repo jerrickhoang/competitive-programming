@@ -15,3 +15,5 @@ Use std::stack<int> s , s.push(), s.top(), s.pop() similar to priority_queue des
 Use map<int, int> m, m.find()!=m.end() or EXIST(m, k) to check if an element is in the map. UVA 11572. Note that map<int, int> is comparable be default, so you can have map <map<int, int> > or set< map<int, int> > UVA 11286
 
 Use multiset to maintain sorted list of items. multiset<int> m be default is increasing sequence. m.insert(v) to insert, m.erase() to erase. UVA 11136
+
+Use getline(cin, line); stringstreem ss(line), ss >> a >> b >> c; to read lines when using cin is hard. When mixing cin and getline, remember to flush new line character after cin read. UVA 793
