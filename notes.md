@@ -19,3 +19,5 @@ Use multiset to maintain sorted list of items. multiset<int> m be default is inc
 Use getline(cin, line); stringstreem ss(line), ss >> a >> b >> c; to read lines when using cin is hard. When mixing cin and getline, remember to flush new line character after cin read. UVA 793
 
 Union-find (disjoint sets) idea is to keep 2 arrays, p and h where p[i] points to the parent of i, and h[i] points to the "rank" of i (height of the tree from i to parent). When merging 2 sets, we always merge the smaller tree (lower h) into the bigger tree (higher h). We also do pruning where whenever we find(i) = j, we will point i directly to j.
+
+Segment tree is to solve the dynamic range sum query problem. If we keep an array of prefix sum, then query is O(1) but update is O(n). Using segment tree, we can have update to be O(log n) and query to be O(log n). The idea behind segment tree is that we will have all elements in the array in the leaf nodes, tree[i + n]. For each node j < n, tree[j] = tree[j << 1] + tree[j << 1 | 1]. 
