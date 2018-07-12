@@ -17,3 +17,5 @@ Use map<int, int> m, m.find()!=m.end() or EXIST(m, k) to check if an element is 
 Use multiset to maintain sorted list of items. multiset<int> m be default is increasing sequence. m.insert(v) to insert, m.erase() to erase. UVA 11136
 
 Use getline(cin, line); stringstreem ss(line), ss >> a >> b >> c; to read lines when using cin is hard. When mixing cin and getline, remember to flush new line character after cin read. UVA 793
+
+Union-find (disjoint sets) idea is to keep 2 arrays, p and h where p[i] points to the parent of i, and h[i] points to the "rank" of i (height of the tree from i to parent). When merging 2 sets, we always merge the smaller tree (lower h) into the bigger tree (higher h). We also do pruning where whenever we find(i) = j, we will point i directly to j.
